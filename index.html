@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="shortcut icon" href="https://t1.rbxcdn.com/b233473db836b7b3f18fa8b4fc51ea9c">
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roblox</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+
+        #Thanks {
+            background: none;
+            color: #ccc;
+            width: 240px;
+            height: 80px;
+            border: 1px solid #338033;
+            font-size: 18px;
+            border-radius: 4px;
+            transition: .6s;
+            overflow: hidden;
+        }
+
+        #Thanks:focus {
+            outline: none;
+        }
+
+
+        #Thanks:before {
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, 1);
+            width: 60px;
+            height: 100px;
+            left: 0;
+            top: 0;
+            opacity: .5s;
+            filter: blur(30px);
+            transform: translateX(-130px) skewX(-15deg);
+        }
+
+        #Thanks:after {
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, 1);
+            width: 30px;
+            height: 100%;
+            left: 30px;
+            top: 0;
+            opacity: 0;
+            filter: blur(30px);
+            transform: translate(-100px) scaleX(-15deg);
+        }
+
+        #Thanks:hover {
+            background: #338033;
+            cursor: pointer;
+
+        }
+
+        #Thanks:hover:before {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: .6;
+            transition: .7s;
+        }
+
+        #Thanks:hover:after {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: 1;
+            transition: .7s;
+        }
+
+        #login {
+            background: none;
+            color: #ccc;
+            width: 240px;
+            height: 80px;
+            border: 1px solid #5567ec;
+            font-size: 30px;
+            border-radius: 4px;
+            transition: .6s;
+            overflow: hidden;
+        }
+
+        #login:focus {
+            outline: none;
+        }
+
+
+        #login:before {
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, .5);
+            width: 60px;
+            height: 100px;
+            left: 0;
+            top: 0;
+            opacity: .5s;
+            filter: blur(30px);
+            transform: translateX(-130px) skewX(-15deg);
+        }
+
+        #login:after {
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, .2);
+            width: 30px;
+            height: 100%;
+            left: 30px;
+            top: 0;
+            opacity: 0;
+            filter: blur(30px);
+            transform: translate(-100px) scaleX(-15deg);
+        }
+
+        #login:hover {
+            background: #5567ec;
+            cursor: pointer;
+
+        }
+
+        #login:hover:before {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: .6;
+            transition: .7s;
+        }
+
+        #login:hover:after {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: 1;
+            transition: .7s;
+        }
+
+        #create {
+            background: none;
+            color: #ccc;
+            width: 240px;
+            height: 80px;
+            border: 1px solid #ff0000;
+            font-size: 30px;
+            border-radius: 4px;
+            transition: .6s;
+            overflow: hidden;
+        }
+
+        #create:focus {
+            outline: none;
+        }
+
+
+        #create:before {
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, .5);
+            width: 60px;
+            height: 100px;
+            left: 0;
+            top: 0;
+            opacity: .5s;
+            filter: blur(30px);
+            transform: translateX(-130px) skewX(-15deg);
+        }
+
+        #create:after {
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, .2);
+            width: 30px;
+            height: 100%;
+            left: 30px;
+            top: 0;
+            opacity: 0;
+            filter: blur(30px);
+            transform: translate(-100px) scaleX(-15deg);
+        }
+
+        #create:hover {
+            background: #ff0000;
+            cursor: pointer;
+
+        }
+
+        #create:hover:before {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: .6;
+            transition: .7s;
+        }
+
+        #create:hover:after {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: 1;
+            transition: .7s;
+        }
+
+        #survey {
+            background: none;
+            color: #ccc;
+            width: 240px;
+            height: 80px;
+            border: 1px solid #5567ec;
+            font-size: 50px;
+            border-radius: 4px;
+            transition: .6s;
+            overflow: hidden;
+        }
+
+        #survey:focus {
+            outline: none;
+        }
+
+
+        #survey:before {
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, .5);
+            width: 60px;
+            height: 100px;
+            left: 0;
+            top: 0;
+            opacity: .5s;
+            filter: blur(30px);
+            transform: translateX(-130px) skewX(-15deg);
+        }
+
+        #survey:after {
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, .2);
+            width: 30px;
+            height: 100%;
+            left: 30px;
+            top: 0;
+            opacity: 0;
+            filter: blur(30px);
+            transform: translate(-100px) scaleX(-15deg);
+        }
+
+        #survey:hover {
+            background: #5567ec;
+            cursor: pointer;
+
+        }
+
+        #survey:hover:before {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: .6;
+            transition: .7s;
+        }
+
+        #survey:hover:after {
+            transform: translateX(300px) skewX(-15deg);
+            opacity: 1;
+            transition: .7s;
+        }
+
+        #info {
+            -moz-box-shadow: inset 0px 0px 10px 0px #292e27;
+            -webkit-box-shadow: inset 0px 0px 10px 0px #292e27;
+            box-shadow: inset 0px 0px 10px 0px #292e27;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #44c767), color-stop(1, #5cbf2a));
+            background: -moz-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+            background: -webkit-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+            background: -o-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+            background: -ms-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+            background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#44c767', endColorstr='#5cbf2a', GradientType=0);
+            background-color: #44c767;
+            -moz-border-radius: 42px;
+            -webkit-border-radius: 42px;
+            border-radius: 42px;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Verdana;
+            font-size: 20px;
+            padding: 20px 35px;
+            text-decoration: none;
+            text-shadow: 2px -1px 0px #2f6627;
+
+        }
+
+        #info:hover {
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #44c767));
+            background: -moz-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+            background: -webkit-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+            background: -o-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+            background: -ms-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+            background: linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cbf2a', endColorstr='#44c767', GradientType=0);
+            background-color: #5cbf2a;
+        }
+
+        #info:active {
+            position: relative;
+            top: 1px;
+        }
+
+
+        html,
+        body {
+            height: 100%;
+            background-color: #FEF0DE;
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 250%;
+        }
+
+        .sect {
+            height: 100%;
+            width: 100%;
+            margin: auto;
+            top: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .subsection {
+            background-color: #FEF0DE;
+        }
+
+        .sect1 {
+            background-image: url('sect1.jpg');
+            position: relative;
+        }
+
+        .sect2 {
+            background-image: url('sect2.jpg');
+        }
+
+        .sect3 {
+            background-image: url('sect3.jpg');
+        }
+
+        .sect4 {
+            background-image: url('sect4.jpg');
+        }
+
+        .sect5 {
+            background-image: url('sect5.jpg');
+        }
+
+        .sect6 {
+            background-image: url('sect6.jpg');
+        }
+
+        .sect7 {
+            background-image: url('sect7.jpg');
+        }
+
+        .part2 {
+            height: 50%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="sect sect1">
+    </div>
+
+    <div class="subsection">
+        <h1 style=color:red;font-size:650%;text-align:center;background-color:dodgerblue;> Roblox </h1>
+        <h3 style=text-align:center;color:navy;> A platform to empower imagination </h3>
+        <h3 style=text-align:center;color:navy;> Millions of players just like you </h3>
+
+    </div>
+
+    <div class="sect sect2"></div>
+
+    <div class="subsection part1">
+
+
+        <h2 style=color:red;><span style="color: black">1.</span> What Is Roblox </h2>
+
+        <!—- 1 -—>
+            <p style="font-size:110%" ;title="AboutRoblox"><span style="text-align: center;"><b><i> <a
+                                href="https://www.roblox.com" target=_blank>Roblox</a> is a massively multiplayer online
+                            and game creation system platform that allows users to design their own games and play a
+                            wide variety of different types of games created by other users.</i></b> <br>
+                    The platform hosts user-created games and virtual worlds covering a wide variety of genres, from
+                    traditional racing and role-playing games to simulations and obstacle courses. As of April 2019,
+                    Roblox has over 90 million monthly active users.You can make your very own account by pressing this
+                    button.</span></p>
+
+            <center><a href="https://www.roblox.com/Login" target=_blank id="login">Login/Sign In</a></center>
+
+
+    </div>
+
+    <div class="sect sect3"></div>
+
+    <div class="subsection">
+
+        <h2 style=color:blue;><span style="color: black">2.</span> How To Make A Game </h2>
+
+        <!-— 2 -—>
+            <p style="font-size:110%" ;title="HowMakeAGameInRoblox"><span style="text-align: center;">Roblox is a game
+                    creation platform which allows players to create their own games using its proprietary engine,
+                    Roblox Studio. Games are coded under an object oriented programming system utilizing the programming
+                    language Lua to manipulate the environment of the game. Users are able to create game passes, which
+                    are purchasable content through one-time purchases, as well as microtransactions through developer
+                    products. Developers on the site exchange Robux earned from various products on their games into
+                    real world currency through the Developer Exchange system. A percentage of the revenue from
+                    purchases is split between the developer and Roblox. </span></p>
+
+            <center><a href="https://www.roblox.com/create" target=_blank id="create" ;>Start Creating Here</a></center>
+    </div>
+
+    <div class="sect sect4"></div>
+
+    <div class="subsection">
+        <h2 style=color:green;><span style="color: black">3.</span>Players</h2>
+
+        <!—- 3 -—>
+            <p style="font-size:110%" ;title="AboutOtherPlayers"><span style="text-align: center;">Roblox allows players
+                    to buy, sell, and create virtual items. Clothes can be bought anyone but only players with a
+                    Builders Club membership can sell them. Only Roblox administrators can sell accessories, body parts,
+                    gear, and packages under the official Roblox user account. Items with a limited status can only be
+                    sold on the catalog or traded with Builders Club.Robux is the virtual currency in Roblox that allows
+                    players to buy various items. Players can obtain Robux through real life purchases, another player
+                    buying their items, or from earning daily Robux with a membership.</span></p>
+
+    </div>
+
+    <div class="sect sect5"></div>
+    <div class="subsection">
+
+        <h2 style=color:gold;><span style="color: black">4.</span>Events</h2>
+
+        <!—- 4 —->
+            <p style="font-size:110%" ;>There are many events held in game.Many events are sponsered and others are
+                officialy conducted by roblox itself.<br>
+                Here are some past of events:<br><br>
+                Official Events<br>
+
+                <ul>
+                    <li>Annual Virtual Egg Hunt</li>
+                    <li>Annual Bloxy Awards (Gives to best Developers,Youtubers,Gamers,etc)</li>
+                    <li>Rthro Launch Event</li>
+                    <li>Powers Event</li>
+                    <li>Creators Challenge</li>
+                    <li>Roblox Sports Event</li>
+                    <li>Roblox’s Imagination Event</li>
+                    <li>Medival Battle Event</li><br><br>
+                </ul>
+                <span style=text-align:left;>Sponsered Events<br><br></span>
+                <ul>
+                    <li><abbr title="ReadyPlayerOne">RPO</abbr> Event</li>
+                    <li><abbr title="Incredebles2MovieEvent">Heros Event</abbr></li>
+                    <li>Nike Shoes Launch Event</li>
+                    <li>Aquaman Event</li>
+                    <li>WrestleMania Superstars Events</li>
+                    <li>Universe Event</li>
+                    <li>Stars Wars:The Last Jedi Event</li>
+                </ul>
+
+                <center><a href="https://blog.roblox.com/category/events/" target=_blank id="info">Click Here For More
+                        Info</a></center> <br><br>
+                <p style="text-align: center;font-size:110%">Here Is A Poster From One Of The Event</p>
+
+                <img src="https://blog.roblox.com/wp-content/uploads/2019/03/375_Infographics_BloxyHighlight-1.jpg"
+                    style="width: 100%">
+    </div>
+
+
+
+    <div class="subsection">
+
+        <h2 style=color:indigo;><span style="color: black">5.</span>Games</h2><br>
+
+        <!—- 5 —->
+            <p style="font-size:110%" ;><span style="text-align: center;">There are many games in roblox created by
+                    players just like you.Games are also categorized in diffrent types like action, storyline, etc.Most
+                    of the games are free and some are paid. Games also have diffrent gamepasses which are paid passes
+                    which gives extra benefits while playing a certain game.Games might be created by a single player or
+                    a group of player.Games are also catagorized on the basis of their types like action
+                    games,role-play,simulator,etc. </span><br><br>
+
+                <p style=text-align:center;font-size:200%;>Here Are Some Popular Games</p><br><br>
+
+
+                <center>
+                    <a href="https://www.roblox.com/games/292439477/New-AA-12-Phantom-Forces" target=_blank><img
+                            src='phantomforces.jpg' alt="PhantomForces" style="width: 150px"></a>
+
+                    <a href="https://www.roblox.com/games/606849621/Jailbreak-HD-TIRES" target=_blank><img
+                            src='jailbreak.jpg' alt="Jailbreak" style="width: 170px"></a>
+
+                    <a href="https://www.roblox.com/games/185655149/Welcome-to-Bloxburg-BETA" target=_blank><img
+                            src='bloxburg.jpg' alt="Bloxburg" style="width: 147px"></a>
+
+                    <a href="https://www.roblox.com/games/286090429/Arsenal" target=_blank><img src='arsenal.jpg'
+                            alt=Aersnal style="width: 164px"> </a>
+
+                    <a href="https://www.roblox.com/games/1224212277/Mad-City" target=_blank><img src='madcity.jpg'
+                            alt="MadCity" style="width: 163px"></a>
+
+                    <a href="https://www.roblox.com/games/301549746/Counter-Blox" target=_blank><img
+                            src='counterblox.jpg' alt="CounterBlox" style="width:167px"></a></center>
+
+
+                <p style=font-size:125%;text-align:center;>Click The Images To Play</p><br><br>
+                </table>
+
+    </div>
+
+    <div class="sect sect6"></div>
+
+    <div class="subsection part2">
+        <iframe width="100%" height="100%" align="center" src="https://www.youtube.com/embed/F8FClLXbhuo"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <div class="sect sect7"></div>
+
+
+    <div class="subsection">
+
+        <table style=width:100%>
+            <tr>
+                <td> <a href="https://www.instagram.com/jaitra_shah/" target=_blank> <span> <img src='instagramlogo.jpg'
+                                alt="Instragram" style=height:50px width="50px"></span></a></td>
+                <td> <a href="https://www.roblox.com/users/349980834/profile" target=_blank><img src='robloxlogo.jpg'
+                            alt="Roblox" style=height:50px width="50px"></td>
+            </tr>
+
+            <tr>
+                <td style="width: 100%"> Jaitra_Shah </td>
+                <td style="width: 100%"> Jaitra1264 </td>
+        </table>
+        <p style=text-align:center;font-size:200%>See you soon</p>
+        <center><input type="button" id="Thanks" ; onclick="alert('Thank You For Visiting My First Website!')"
+                value="CLICK ME!"></center>
+        <p style=color:dodgerblue;font-size:300%;text-align:center;>Thank You</p>
+        <br><br>
+        <center>
+            <p style="font-size: 200%">Please Give This Small Survey For Future Improvements</p>
+        </center>
+
+        <center><a href="https://forms.gle/ZtTQ3aWCZWWeuX8Q8" target="_blank" id="survey">Begin Survey</a></center>
+
+
+    </div>
+
+</body>
+
+</html>
